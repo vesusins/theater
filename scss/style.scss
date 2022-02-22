@@ -6,6 +6,10 @@ body {
     background: #333333;
 }
 
+span {
+    color: #D1A954;
+}
+
 .grid {
         display: grid;
         grid-template: 1fr / repeat(12, 65px);
@@ -61,9 +65,23 @@ body {
 }
 
 .title {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+
+.title-about {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 29px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
 .subtitle {
     font-family: "Open Sans";
     font-weight: normal;
@@ -118,6 +136,7 @@ body {
             line-height: 22px;
             letter-spacing: 0.05em;
                 span {
+                    color: inherit;
                     padding-bottom: 5px;
                     border-bottom: 2px solid #D1A954;
                 }
@@ -128,7 +147,6 @@ body {
 // ----------- main
 .main {
         grid-area: main;
-        grid-template-rows: repeat(6, 1fr);
         &__backgraund {
             position: absolute;
             width: 100%;
@@ -145,6 +163,12 @@ body {
     &__theater {
         margin-top: 100px;
         align-items: center;
+    }
+    &__about {
+        padding-bottom: 150px;
+    }
+    
+    &__productions {
     }
 }
 
@@ -184,39 +208,113 @@ body {
 // -------------about
 
 .about {
+    display: flex;
+    flex-direction: column;
     
-    &__content {
+    &__title {
+        &:first-letter{
+            color: #D1A954;
+        }
+    }
 
+    &__content {
+        display: grid;
+        grid-template: 1fr / repeat(12, 65px);
+        gap: 30px;
+    }
+
+    &__best {
+        grid-column: span 5;
         &_title {
+
         }
 
         &_subtitle {
         }
+    }
 
-        &_number {
-        }
+    &__number {
+        grid-column: 6 / 9;
     }
 
     &__image {
-
+        grid-column: 9 / 13;
         &_active {
+            height: 100%;
+            object-fit: cover;
         }
     }
 }
-
 .nubmer {
 
-    &__title {
+    &__number {
+
+        &_title {
+        }
     }
 
     &__column {
 
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
         &_img {
+            margin-bottom: 15px;
         }
 
         &_text {
+            
         }
     }
 }
 
 
+// -----------Productions 
+.productions {
+    
+    &__title {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 450px);
+        grid-template-rows: 550px 550px;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        justify-content: center;
+    }
+
+    &__card {
+        position: relative;
+    }
+}
+.title {
+}
+.card {
+
+    &__image {
+       position: relative;
+       z-index: -20;
+       width: 442px;
+        height: 550px;
+    }
+
+    &__text {
+        z-index: 30;
+        &_top {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+
+        &_bot {
+            writing-mode: vertical-rl;
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+        }
+    }
+}

@@ -80,6 +80,10 @@ body {
   background: #333333;
 }
 
+span {
+  color: #D1A954;
+}
+
 .grid {
   display: -ms-grid;
   display: grid;
@@ -156,8 +160,21 @@ body {
 }
 
 .title {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 65px;
+  text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.title-about {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
 .subtitle {
@@ -225,6 +242,7 @@ body {
 }
 
 .menu__nubmer span {
+  color: inherit;
   padding-bottom: 5px;
   border-bottom: 2px solid #D1A954;
 }
@@ -233,8 +251,6 @@ body {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: main;
-  -ms-grid-rows: (1fr)[6];
-      grid-template-rows: repeat(6, 1fr);
 }
 
 .main__backgraund {
@@ -253,6 +269,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.page__about {
+  padding-bottom: 150px;
 }
 
 .theater {
@@ -284,4 +304,106 @@ body {
   text-align: center;
   position: relative;
   background-position: 50px 65px;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about__title:first-letter {
+  color: #D1A954;
+}
+
+.about__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: (65px)[12];
+      grid-template: 1fr/repeat(12, 65px);
+  gap: 30px;
+}
+
+.about__best {
+  grid-column: span 5;
+}
+
+.about__number {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6 / 9;
+}
+
+.about__image {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-column: 9 / 13;
+}
+
+.about__image_active {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.nubmer__column:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.nubmer__column_img {
+  margin-bottom: 15px;
+}
+
+.productions__title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.productions__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (450px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 450px);
+  -ms-grid-rows: 550px 550px;
+      grid-template-rows: 550px 550px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.productions__card {
+  position: relative;
+}
+
+.card__image {
+  position: relative;
+  z-index: -20;
+  width: 442px;
+  height: 550px;
+}
+
+.card__text {
+  z-index: 30;
+}
+
+.card__text_top {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.card__text_bot {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
 }
