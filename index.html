@@ -13,7 +13,7 @@
     <!-- header -->
     <div class="wrapper">
         <header class="header">
-            <nav class="header__menu menu">
+            <nav class="header__menu menu grid">
                 <!-- menu -->
                 <ul class="menu__list">
                     <li class="menu__link link">
@@ -67,13 +67,13 @@
                         <img class="theater__image_active" src="pic/theater/image 3.png" alt="">
                     </div>
                 </section>
-                <section class="page__about about grid">
+                <section class="page__about about">
                     <h2 class="about__title title">
                         о театре
                     </h2>
-                    <div class="about__content">
+                    <div class="about__content grid">
                         <div class="about__best">
-                            <h3 class="about__best_title title-about">
+                            <h3 class="about__best_title title-mini">
                                 Самый лучший театр СПБ
                             </h3>
                             <div class="about__best_subtitle subtitle">
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                         <div class="about__number number">
-                            <h3 class="nubmer__number_title title-about">
+                            <h3 class="nubmer__number_title title-mini">
                                 немного о цифрах
                             </h3>
                             <div class="nubmer__column">
@@ -165,11 +165,79 @@
                         </div>
                     </div>
                 </section>
+                <section class="page__rating rating grid">
+                        <div class="rating__year">
+                            <span>2018</span>
+                            <span>2019</span>
+                            <span>2020</span>
+                        </div>
+                    <div class="rating__estimation">
+                        <div class="rating__estimation_star">
+                            <img src="pic/rating/stars.svg" alt="">
+                        </div>
+                        <div class="rating__estimation_text">
+                            Лучший театр по мнению театральных критиков Парижа
+                        </div>
+                    </div>
+                </section>
+                <section class="page__partner partner">
+                    <h2 class="partner__title title">
+                        <span>партнеры</span> театра
+                    </h2>
+                    <div class="partner__content grid">
+                        <img src="pic/partner/logo.svg" alt="Газпром">
+                        <img src="pic/partner/logo.svg" alt="Газпром">
+                        <img src="pic/partner/logo.svg" alt="Газпром">
+                        <img src="pic/partner/logo.svg" alt="Газпром">
+                        <img src="pic/partner/logo.svg" alt="Газпром">
+                        <img src="pic/partner/logo.svg" alt="Газпром">
+                        <img src="pic/partner/logo.svg" alt="Газпром">
+                        <img src="pic/partner/logo.svg" alt="Газпром">
+                    </div>
+                </section>
+                <section class="page__maecenas maecenas">
+                    <h2 class="maecenas__title title">
+                        <span>стать</span> меценатом
+                    </h2>
+                    <div class="maecenas__content content grid">
+                        <div class="content__contacts">
+                           <a href="tel:+7 (812) 123-45-55">+7 (812) 123-45-55</a>
+                           <a href="tel:+7 (812) 123-45-66">+7 (812) 123-45-66</a>
+                           <a href="mailto:info@theater.ru">info@theater.ru</a>
+                           <a href="https://yandex.ru/maps/-/CCU5fHGh~B" target="_blank">г. санкт-петербург, невский 140</a>
+                        </div>
+                        <div class="content__right">
+                            <form id="maecenas" action="url" method="get" class="content__form form">
+                                <input type="text" name="name"  placeholder="Имя" class="form__input">
+                                <input type="text" name="company" placeholder="Компания" class="form__input">
+                                <textarea type="text" name="message" placeholder="Сообщение" class="form__input_big"></textarea>
+                                <input type="tel" name="tel" placeholder="Телефон" class="form__input">                                
+                                <input type="email" name="email" placeholder="email" class="form__input">                                
+                            </form>
+                            <div class="content__subbmit">
+                                <div class="content__subbmit_text">
+                                    * Ваши данные не будут переданы третьим лицам, 100%  вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52. 
+                                </div>
+                                <div class="content__subbmit_button link">
+                                    <button form="maecenas" type="submit" class="button link">
+                                        отправить
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
+            <footer class="footer">
+                <div class="footer__reserved">
+                    (с) Все права защищены. Большой театр. 2020
+                </div>
+                <div class="footer__disigned">
+                    developed by M. Sergeev
+                </div>
+            </footer>
         </div>
-    </div>
-
 </body>
 
 </html>
